@@ -1,0 +1,1 @@
+"electron1": "webpack-dashboard -- webpack-dev-server --progress --colors","electron2": "electron main.js",
