@@ -6,8 +6,9 @@
   "scripts": {
     "start": "webpack-dev-server --open",
     "dev": "set type=dev&webpack",
-    "build": "set type=build&webpack",
-    "electron": "webpack-dashboard -- webpack-dev-server --progress --colors",
+    "build-web": "set type=build&webpack",
+    "build-electron": "build --win --x64",
+    "electron": "webpack  --config webpack.electron.js&& electron .",
     "packager": "webpack  --config webpack.electron.js&& electron-packager . --platform=win32 --electron-version=1.7.9  --overwrite"
   },
   "author": "",
@@ -25,6 +26,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "builder": "^3.2.3",
     "copy-webpack-plugin": "^4.3.1",
     "css-loader": "^0.28.7",
     "electron": "^1.7.10",
@@ -49,5 +51,18 @@
     "webpack-dashboard": "^0.3.0",
     "webpack-dev-server": "^2.9.7",
     "webpack-target-electron-renderer": "^0.4.0"
+  },
+  "build":{
+    "appId":"com.leon.HelloWorld02",
+    "copyright":"LEON",
+    "productName":"HelloWorld02",
+    "dmg":{
+      "background":"public/1.jpg",
+      "window":{
+        "x":100,
+        "y":100
+      }
+    },
+    "win":"public/avatar.png"
   }
 }
