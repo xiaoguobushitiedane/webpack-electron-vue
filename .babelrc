@@ -1,5 +1,4 @@
 {
-    "presets": [
-        "react","env"
-    ]
+    "presets":["es2015","env","stage-3"]
+   
 }

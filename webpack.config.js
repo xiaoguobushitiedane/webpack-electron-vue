@@ -26,12 +26,12 @@ const entry=require("./webpack_config/entry_webpack.js")
 
 if(process.env.type=="build"){
     var website={
-        publicPath:"http://192.168.0.6:8080/"
+        publicPath:"http://192.168.128.153:8080/"
     }
     
 }else{
    var website={
-        publicPath:"http://192.168.0.6:1717/"
+        publicPath:"http://192.168.128.153:1717/"
     }
 }
 
@@ -163,7 +163,7 @@ module.exports={
     //webpack开发服务
     devServer:{
         contentBase:path.resolve(__dirname,'dist'),//热服务的绝对路径
-        host:'192.168.0.6',//服务器地址
+        host:'192.168.128.153',//服务器地址
         compress:true,//是否启用服务器端口
         port:1717//端口
     },
