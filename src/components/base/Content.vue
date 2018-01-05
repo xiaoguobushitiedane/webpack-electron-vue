@@ -1,7 +1,8 @@
-<template>
-	<div id="app">
+	<<template>
+	  
+	<div id="content">
 		<h1>数据中心获取数据</h1>
-		<p>本地数据:{{localdata}}---数据中心数据:{{$store.state.count}}
+		<p>本地数据:{{localdata}}---数据中心数据:{{$store.state.Content.count}}
 			----数据中心getters数据:{{count2}}
 		</p>
 		<p>
@@ -35,11 +36,9 @@ import {mapState,mapGetters,mapMutations,mapActions} from 'vuex'
 		},
 		computed:{
 			...mapState({
-				count : state=>state.count
-			}),
-			...mapGetters([
-				"count2"
-			])
+				count : state=>state.Content.count
+			})
+			
 
 		},
 		methods:{
@@ -57,8 +56,3 @@ import {mapState,mapGetters,mapMutations,mapActions} from 'vuex'
 		}
 	}
 </script>
-<style>
-	
-</style>
-
-

@@ -8,15 +8,13 @@
 
 // $("#title").innerHTML="sssssssssssss";
 
-/**
- * vue
- */
+
 import Vue from 'vue'
-import hello from './components/main.vue'
-import store from './store/store.js'
-import router from './router/router.js'
+import App from './App.vue'
+import store from './store'
+
 new Vue({
 	el:"#main",
 	store,
-	render:xx=>xx(hello)
+	render:xx=>xx(App)
 })

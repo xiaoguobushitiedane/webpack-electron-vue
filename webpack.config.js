@@ -48,10 +48,13 @@ module.exports={
         path:path.resolve(__dirname,'dist'),//出口路径
         //filename:'bundle.js'//出口文件
         filename:"[name].js",//和入口文件匹配
-        publicPath:website.publicPath//配置公共路径
+        //publicPath:website.publicPath//配置公共路径
     },
     resolve: {
-        extensions: ['.js', '.vue']
+        extensions: ['.js', '.vue'],
+        alias: {
+            'vue'  : 'vue/dist/vue.min'
+        }
     },
     //模块,解读css
     module:{

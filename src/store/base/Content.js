@@ -9,11 +9,6 @@ const state={
     getData:{ss:"ss"},
     postData:{pp:"pp"}
 }
-const getters={
-    count2 :function(){
-        return state.count+=1
-    }
-}
 
 const mutations={
     jia(state){
@@ -90,18 +85,4 @@ const actions={
     }
 
 }
-const moduleA={
-	state,
-	mutations,
-	getters,
-	actions
-}
-export default new Vuex.Store({
-    //modules:{
-    // a:moduleA
-    //}
-    state,
-	mutations,
-	getters,
-	actions
-})
+
